@@ -6,7 +6,7 @@ Web application for ordering pre-cooked African meals and ingredient boxes with 
 
 Moriah Box serves two audiences:
 
-- **Customers** — African singles and families looking for pre-cooked meals or prepared African food ingredients with step-by-step recipes.
+- **Customers** — Singles and families looking for pre-cooked meals or prepared African food ingredients with step-by-step recipes.
 - **Drivers** — Car owners looking for side income by delivering orders within their area.
 
 ## Tech Stack
@@ -74,4 +74,4 @@ See `.env.example` for the full list. Required values:
 
 ## Backend
 
-The REST API is in the companion repository [`kabusko/moriahbox`](https://github.com/kabusko/moriahbox) — Spring Boot 3, Java 21, PostgreSQL.
+The REST API is in the companion repository [`moriahbox/moriahbox`](https://github.com/moriahbox/moriahbox) — Spring Boot 3, Java 21, PostgreSQL.

@@ -143,6 +143,7 @@ export default function CheckoutPage() {
   const [isPlacing, setIsPlacing] = useState(false)
   const [isPolling, setIsPolling] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [paymentSetupError, setPaymentSetupError] = useState(false)
 
   function validatePostalCode(value: string) {
     if (!value || activeAreaCodes.length === 0) {
@@ -204,8 +205,8 @@ export default function CheckoutPage() {
 
   async function pollForClientSecret(orderId: string): Promise<string | 'PAYMENT_INTENT_FAILED' | null> {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    for (let attempt = 0; attempt < 5; attempt++) {
-      if (attempt > 0) await new Promise(r => setTimeout(r, 1000))
+    for (let attempt = 0; attempt < 15; attempt++) {
+      if (attempt > 0) await new Promise(r => setTimeout(r, 3000))
       try {
         const res = await fetch(`${base}/api/orders/${orderId}/payment-intent`)
         if (res.ok) {
@@ -224,6 +225,7 @@ export default function CheckoutPage() {
     e.preventDefault()
     setIsPlacing(true)
     setError(null)
+    setPaymentSetupError(false)
 
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
     const deliveryAddress: DeliveryAddress = {
@@ -279,7 +281,7 @@ export default function CheckoutPage() {
         return
       }
       if (!clientSecret) {
-        setError(c.errorPaymentSetup)
+        setPaymentSetupError(true)
         return
       }
 
@@ -587,6 +589,17 @@ export default function CheckoutPage() {
           </section>
 
           {error && <p className="text-red-600 text-[13px]">{error}</p>}
+          {paymentSetupError && (
+            <div className="text-[13px] text-red-600 space-y-1">
+              <p>{c.errorPaymentSetup}</p>
+              <p className="text-red-500">
+                {c.errorPaymentSetupHelp}{' '}
+                <a href="/contact" className="underline hover:text-red-700">{c.errorPaymentSetupContact}</a>
+                {' · '}
+                <a href="tel:+15145463946" className="underline hover:text-red-700">+1 514 546 3946</a>
+              </p>
+            </div>
+          )}
 
           <div className="flex items-center justify-between">
             <button

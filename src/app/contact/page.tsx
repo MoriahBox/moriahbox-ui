@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, MapPin, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { Navbar } from '@/components/marketing/Navbar'
 import { Footer } from '@/components/marketing/sections/Footer'
 import { useLanguage } from '@/components/providers/LanguageProvider'
@@ -31,6 +31,18 @@ export default function ContactPage() {
       {/* Contact cards */}
       <section className="px-6 py-16 md:px-12">
         <div className="max-w-3xl mx-auto flex flex-col gap-5">
+
+          <div className="bg-white border border-[#d8e8dc] rounded-lg p-6 flex gap-5 items-start">
+            <div className="mt-0.5 w-10 h-10 bg-[#e8f5ee] rounded-md flex items-center justify-center shrink-0">
+              <Phone size={18} className="text-[#2d6e42]" />
+            </div>
+            <div>
+              <p className="text-[12px] font-semibold text-[#3a5a44] uppercase tracking-wide mb-1">{p.phoneLabel}</p>
+              <a href={`tel:${p.phone.replace(/\s/g, '')}`} className="text-[15px] font-medium text-[#2d6e42] hover:underline">
+                {p.phone}
+              </a>
+            </div>
+          </div>
 
           <div className="bg-white border border-[#d8e8dc] rounded-lg p-6 flex gap-5 items-start">
             <div className="mt-0.5 w-10 h-10 bg-[#e8f5ee] rounded-md flex items-center justify-center shrink-0">

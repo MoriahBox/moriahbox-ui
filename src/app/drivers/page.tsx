@@ -1,31 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 import { Navbar } from '@/components/marketing/Navbar'
 import { Footer } from '@/components/marketing/sections/Footer'
 import { useLanguage } from '@/components/providers/LanguageProvider'
-import { DriverFaqItem } from '@/types/driver'
-
-const API_BASE = () => process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
 
 export default function DriversPage() {
   const { t } = useLanguage()
   const { driverCTA, driversPage } = t
 
-  const [faq, setFaq] = useState<DriverFaqItem[] | null>(null)
-  const [faqError, setFaqError] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  useEffect(() => {
-    fetch(`${API_BASE()}/api/drivers/faq`)
-      .then(async r => {
-        if (!r.ok) throw new Error()
-        setFaq(await r.json() as DriverFaqItem[])
-      })
-      .catch(() => setFaqError(true))
-  }, [])
 
   return (
     <div className="max-w-6xl mx-auto bg-white shadow-2xl min-h-screen">
@@ -105,45 +91,31 @@ export default function DriversPage() {
             {driversPage.faqTitle}
           </h2>
 
-          {!faq && !faqError && (
-            <div className="flex flex-col gap-3">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className="h-14 rounded-md bg-[#d8e8dc] animate-pulse" />
-              ))}
-            </div>
-          )}
-
-          {faqError && (
-            <p className="text-[14px] text-[#5a6e60]">{driversPage.faqError}</p>
-          )}
-
-          {faq && (
-            <ul className="flex flex-col divide-y divide-[#d8e8dc] border border-[#d8e8dc] rounded-md overflow-hidden">
-              {faq.map((item, i) => {
-                const isOpen = openIndex === i
-                return (
-                  <li key={i} className="bg-white">
-                    <button
-                      onClick={() => setOpenIndex(isOpen ? null : i)}
-                      className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-[#f9fdfb] transition-colors"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="text-[14px] font-semibold text-[#1a4a2a]">{item.question}</span>
-                      <ChevronDown
-                        size={16}
-                        className={`shrink-0 text-[#2d6e42] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                      />
-                    </button>
-                    {isOpen && (
-                      <p className="px-5 pb-4 text-[14px] text-[#5a6e60] leading-relaxed">
-                        {item.answer}
-                      </p>
-                    )}
-                  </li>
-                )
-              })}
-            </ul>
-          )}
+          <ul className="flex flex-col divide-y divide-[#d8e8dc] border border-[#d8e8dc] rounded-md overflow-hidden">
+            {driversPage.faqItems.map((item, i) => {
+              const isOpen = openIndex === i
+              return (
+                <li key={i} className="bg-white">
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                    className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-[#f9fdfb] transition-colors"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-[14px] font-semibold text-[#1a4a2a]">{item.question}</span>
+                    <ChevronDown
+                      size={16}
+                      className={`shrink-0 text-[#2d6e42] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <p className="px-5 pb-4 text-[14px] text-[#5a6e60] leading-relaxed">
+                      {item.answer}
+                    </p>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </section>
 

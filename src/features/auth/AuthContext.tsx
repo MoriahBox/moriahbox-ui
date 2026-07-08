@@ -8,6 +8,7 @@ const IDLE_TIMEOUT_MS = (Number(process.env.NEXT_PUBLIC_IDLE_TIMEOUT_MINUTES) ||
 const IDLE_EVENTS = ['mousemove', 'mousedown', 'keydown', 'touchstart', 'click', 'scroll'] as const
 
 interface AuthContextValue {
+  isReady: boolean
   isLoggedIn: boolean
   isAdmin: boolean
   isDriver: boolean
@@ -16,6 +17,7 @@ interface AuthContextValue {
 }
 
 const AuthContext = createContext<AuthContextValue>({
+  isReady: false,
   isLoggedIn: false,
   isAdmin: false,
   isDriver: false,
@@ -25,6 +27,7 @@ const AuthContext = createContext<AuthContextValue>({
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const supabase = useMemo(() => createClient(), [])
+  const [isReady, setIsReady] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
   const [isDriver, setIsDriver] = useState(false)
@@ -47,7 +50,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setDriverId(meta['driverId'] ?? null)
     }
 
-    supabase.auth.getSession().then(({ data: { session } }) => applySession(session))
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      applySession(session)
+      setIsReady(true)
+    })
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session))
     return () => subscription.unsubscribe()
   }, [supabase])
@@ -87,7 +93,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, isAdmin, isDriver, driverId, signOut }}>
+    <AuthContext.Provider value={{ isReady, isLoggedIn, isAdmin, isDriver, driverId, signOut }}>
       {children}
     </AuthContext.Provider>
   )

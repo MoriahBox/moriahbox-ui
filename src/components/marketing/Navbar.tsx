@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, ShoppingCart, ChevronDown, LogIn, LogOut } from 'lucide-react'
 import { useLanguage } from '@/components/providers/LanguageProvider'
@@ -11,19 +11,18 @@ import type { Lang } from '@/lib/translations'
 
 export function Navbar() {
   const pathname = usePathname()
-  const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [adminOpen, setAdminOpen] = useState(false)
   const [mobileAdminOpen, setMobileAdminOpen] = useState(false)
   const [driverOpen, setDriverOpen] = useState(false)
   const [mobileDriverOpen, setMobileDriverOpen] = useState(false)
-  const { isLoggedIn, isAdmin, isDriver, driverId, signOut } = useAuth()
+  const { isReady, isLoggedIn, isAdmin, isDriver, driverId, signOut } = useAuth()
   const { lang, setLang, t } = useLanguage()
   const { itemCount } = useCart()
 
   async function handleLogout() {
     await signOut()
-    router.push('/')
+    window.location.href = '/'
   }
 
   const navLinks = [
@@ -146,7 +145,7 @@ export function Navbar() {
           <LangToggle lang={lang} setLang={setLang} />
 
           {/* Auth button */}
-          {isLoggedIn ? (
+          {isReady && (isLoggedIn ? (
             <button
               onClick={handleLogout}
               title={t.nav.signOut}
@@ -164,7 +163,7 @@ export function Navbar() {
             >
               <LogIn size={18} />
             </Link>
-          )}
+          ))}
         </div>
 
         {/* Mobile toggle */}
@@ -275,7 +274,7 @@ export function Navbar() {
             <LangToggle lang={lang} setLang={setLang} />
           </div>
 
-          {isLoggedIn ? (
+          {isReady && (isLoggedIn ? (
             <button
               onClick={handleLogout}
               className="flex items-center gap-2 text-[14px] font-medium text-[#5a6e60] hover:text-[#1a4a2a] transition-colors"
@@ -292,7 +291,7 @@ export function Navbar() {
               <LogIn size={15} />
               {t.nav.signIn}
             </Link>
-          )}
+          ))}
 
         </div>
       )}

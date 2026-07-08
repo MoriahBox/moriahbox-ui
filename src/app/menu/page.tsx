@@ -215,30 +215,31 @@ export default function MenuPage() {
                             return (
                               <div
                                 key={size}
-                                className={`inline-flex items-center rounded-full border text-[11px] font-medium transition-colors ${
+                                className={`inline-flex items-center rounded-full border text-[11px] font-medium ${
                                   inCart
                                     ? 'border-[#2d6e42] bg-[#f2faf5] text-[#2d6e42]'
-                                    : 'border-[#d8e8dc] text-[#5a6e60] hover:border-[#2d6e42] hover:text-[#2d6e42]'
+                                    : 'border-[#d8e8dc] text-[#5a6e60]'
                                 }`}
                               >
                                 <button
                                   onClick={() => handleQuickAdd(item, size, Number(price))}
                                   aria-label={`${t.cart.addToCart} — ${boxSizes[size as keyof typeof boxSizes]}`}
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 hover:opacity-75 transition-opacity"
+                                  className="inline-flex items-center gap-0.5 px-1.5 py-0.5 font-bold text-[#2d6e42] hover:text-[#1a4a2a] transition-colors"
                                 >
-                                  <ShoppingCart size={10} />
-                                  {boxSizes[size as keyof typeof boxSizes]} · {formatCurrency(Number(price), lang)}
-                                  {inCart && (
-                                    <span className="ml-0.5 font-semibold">×{qty}</span>
-                                  )}
+                                  <ShoppingCart size={10} />1
                                 </button>
+                                <span className="w-px h-3 bg-[#d8e8dc] shrink-0" />
+                                <span className="px-2 py-0.5">
+                                  {boxSizes[size as keyof typeof boxSizes]} · {formatCurrency(Number(price), lang)}
+                                  {inCart && <span className="ml-0.5 font-semibold">×{qty}</span>}
+                                </span>
                                 {inCart && (
                                   <>
                                     <span className="w-px h-3 bg-[#2d6e42]/30 shrink-0" />
                                     <button
                                       onClick={() => decrementItem(item.id, size)}
                                       aria-label={t.cart.removeItem}
-                                      className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[11px] font-bold text-red-400 hover:text-red-600 transition-colors"
+                                      className="inline-flex items-center gap-0.5 px-1.5 py-0.5 font-bold text-red-400 hover:text-red-600 transition-colors"
                                     >
                                       <Trash2 size={10} />1
                                     </button>

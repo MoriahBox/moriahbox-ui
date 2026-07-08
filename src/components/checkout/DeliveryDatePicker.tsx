@@ -18,7 +18,7 @@ interface Props {
   selectedSlot: DriverSlot | null
   onSelectDate: (date: string) => void
   onSelectSlot: (slot: DriverSlot) => void
-  translations: { chooseDate: string; chooseTime: string; noSlotsAvailable: string }
+  translations: { chooseDate: string; chooseTime: string; noSlotsAvailable: string; slotLabels: Record<string, string> }
   lang: Lang
 }
 
@@ -99,7 +99,7 @@ export function DeliveryDatePicker({
                     : 'border-[#d8e8dc] bg-white text-[#1a4a2a] hover:border-[#2d6e42]',
                 ].join(' ')}
               >
-                {slotLabels?.[slot] ?? slot}
+                {slotLabels?.[slot] ?? t.slotLabels[slot] ?? slot}
               </button>
             ))}
           </div>

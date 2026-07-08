@@ -577,7 +577,7 @@ export default function CheckoutPage() {
                       selectedSlot={deliverySlot}
                       onSelectDate={date => { setDeliveryDate(date); setDeliverySlot(null); setDeliveryFee(0) }}
                       onSelectSlot={slot => { setDeliverySlot(slot); setDeliveryFee(feesBySlot[slot] ?? 0) }}
-                      translations={{ chooseDate: c.chooseDate, chooseTime: c.chooseTime, noSlotsAvailable: c.noSlotsAvailable }}
+                      translations={{ chooseDate: c.chooseDate, chooseTime: c.chooseTime, noSlotsAvailable: c.noSlotsAvailable, slotLabels: c.slotLabels }}
                       lang={lang}
                     />
                   </div>

@@ -190,6 +190,11 @@ export const translations = {
       backToMenu: 'Back to menu',
       postalCodeNotServed: "We don't deliver to this postal code yet.",
       slotNotAvailable: 'That delivery slot is no longer available. Please choose another.',
+      slotLabels: {
+        MORNING:   'Morning',
+        AFTERNOON: 'Afternoon',
+        EVENING:   'Evening',
+      },
     },
     deliveryAreas: {
       sectionTitle: 'We deliver to',
@@ -720,6 +725,11 @@ export const translations = {
       backToMenu: 'Retour au menu',
       postalCodeNotServed: 'Nous ne livrons pas encore dans ce code postal.',
       slotNotAvailable: 'Ce créneau de livraison n\'est plus disponible. Veuillez en choisir un autre.',
+      slotLabels: {
+        MORNING:   'Matin',
+        AFTERNOON: 'Après-midi',
+        EVENING:   'Soir',
+      },
     },
     deliveryAreas: {
       sectionTitle: 'Nous livrons dans',

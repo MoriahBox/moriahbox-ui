@@ -205,8 +205,8 @@ export default function CheckoutPage() {
 
   async function pollForClientSecret(orderId: string): Promise<string | 'PAYMENT_INTENT_FAILED' | null> {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    for (let attempt = 0; attempt < 15; attempt++) {
-      if (attempt > 0) await new Promise(r => setTimeout(r, 3000))
+    for (let attempt = 0; attempt < 20; attempt++) {
+      if (attempt > 0) await new Promise(r => setTimeout(r, 2000))
       try {
         const res = await fetch(`${base}/api/orders/${orderId}/payment-intent`)
         if (res.ok) {

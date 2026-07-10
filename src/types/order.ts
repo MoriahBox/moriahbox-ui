@@ -27,6 +27,7 @@ export interface DeliveryAddress {
 
 export interface Order {
   id: string
+  displayId: string
   status: OrderStatus
   clientSecret: string | null
   totalAmount: number

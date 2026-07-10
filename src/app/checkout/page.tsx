@@ -327,6 +327,11 @@ export default function CheckoutPage() {
         <h1 className="font-serif text-2xl font-black text-[#1a4a2a] mb-2">
           {c.orderConfirmed}
         </h1>
+        {order?.displayId && (
+          <p className="text-[13px] font-mono bg-[#f2faf5] border border-[#d8e8dc] rounded-md inline-block px-4 py-2 mb-3 text-[#1a4a2a]">
+            {order.displayId}
+          </p>
+        )}
         <p className="text-[14px] text-[#5a6e60] mb-8">
           {c.orderConfirmedSub}
         </p>

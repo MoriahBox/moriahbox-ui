@@ -34,6 +34,7 @@ interface OrderItem {
 
 interface OrderDetail {
   id: string
+  displayId: string
   status: OrderStatus
   orderType: OrderType
   customerEmail: string
@@ -143,7 +144,8 @@ export default function OrderDetailPage() {
         {/* Header */}
         <div className="flex items-start justify-between mb-8">
           <div>
-            <p className="text-[12px] text-[#5a6e60] font-mono mb-2">{order.id}</p>
+            <p className="text-[18px] font-mono font-bold text-[#1a4a2a] mb-1">{order.displayId}</p>
+            <p className="text-[11px] text-[#8a9e90] font-mono mb-2">{order.id}</p>
             <div className="flex items-center gap-3">
               <span className={`px-2.5 py-1 rounded-full text-[12px] font-medium ${STATUS_COLORS[order.status]}`}>
                 {p.statusLabels[order.status]}

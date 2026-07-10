@@ -24,6 +24,7 @@ type OrderType = 'DELIVERY' | 'PICKUP'
 
 interface OrderSummary {
   id: string
+  displayId: string
   status: OrderStatus
   orderType: OrderType
   customerEmail: string
@@ -334,7 +335,7 @@ export default function AdminOrdersPage() {
                           href={`/admin/orders/${order.id}`}
                           className="text-[#2d6e42] hover:text-[#1a4a2a] hover:underline underline-offset-2 transition-colors"
                         >
-                          {order.id.slice(0, 8)}…
+                          {order.displayId}
                         </Link>
                       </td>
                       <td className="px-4 py-3 text-[#5a6e60]">{createdDate}</td>

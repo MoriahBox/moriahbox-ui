@@ -150,9 +150,9 @@ export function Navbar() {
               onClick={handleLogout}
               title={t.nav.signOut}
               aria-label={t.nav.signOut}
-              className="text-[#5a6e60] hover:text-[#1a4a2a] transition-colors"
+              className="bg-[#e8f5ee] text-[#2d6e42] rounded-full p-1.5 hover:bg-[#d0eddb] transition-colors"
             >
-              <LogOut size={18} />
+              <LogOut size={20} />
             </button>
           ) : (
             <Link
@@ -161,7 +161,7 @@ export function Navbar() {
               aria-label={t.nav.signIn}
               className="text-[#5a6e60] hover:text-[#1a4a2a] transition-colors"
             >
-              <LogIn size={18} />
+              <LogIn size={20} />
             </Link>
           ))}
         </div>

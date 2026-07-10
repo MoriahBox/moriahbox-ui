@@ -47,7 +47,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-[#a8c4b0]">
-          <p>© {new Date().getFullYear()} Moriah Box. {footer.allRightsReserved}</p>
+          <p>© {new Date().getFullYear()} MoriahBox. {footer.allRightsReserved}</p>
           <div className="flex gap-5">
             <Link href="/terms" className="hover:text-white transition-colors">{footer.terms}</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">{footer.privacy}</Link>

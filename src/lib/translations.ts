@@ -36,8 +36,9 @@ export const translations = {
       ],
     },
     howItWorks: {
+      audienceBadge: 'For customers',
       badge: 'Simple from start to finish',
-      title: 'How Moriah Box works',
+      title: 'How MoriahBox works',
       sub: 'From browsing to your first bite — the whole process takes minutes, not hours.',
       steps: [
         { number: '01', emoji: '🛒', title: 'Browse the menu',          description: 'Choose from pre-cooked meals ready to eat or ingredient boxes with step-by-step recipes.' },
@@ -122,13 +123,13 @@ export const translations = {
       badge: 'For drivers',
       titleLines: ['Turn spare time', 'into'],
       titleAccent: 'real income.',
-      sub: 'Have a car? Partner with Moriah Box to deliver meals and ingredient boxes in your area. Flexible hours, local routes, and reliable weekly pay.',
+      sub: 'Have a car and a valid license? Partner with MoriahBox to deliver meals and ingredient boxes in your area. Flexible hours, local routes, and reliable weekly pay.',
       cta: 'Apply to drive',
       perks: [
-        { emoji: '⏱️', label: 'Set your own hours' },
-        { emoji: '💵', label: 'Weekly pay, no delays' },
-        { emoji: '📍', label: 'Local routes only' },
         { emoji: '🚀', label: 'Quick onboarding' },
+        { emoji: '⏱️', label: 'Set your own hours' },
+        { emoji: '📍', label: 'Local routes only' },
+        { emoji: '💵', label: 'Weekly pay, no delays' },
       ],
     },
     testimonials: {
@@ -137,7 +138,7 @@ export const translations = {
       items: [
         { quote: 'The Egusi Soup tasted exactly like what I grew up eating. I cried a little — in a good way. Delivery was fast and the packaging kept everything hot.',                                                                                      name: 'Aminata D.', detail: 'Single, London',            initials: 'AD', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
         { quote: "As a busy mum of three I don't have time to source all the ingredients for proper African cooking. The ingredient boxes changed that completely — the kids actually help now.",                                                              name: 'Fatou M.',   detail: 'Family of 5, Birmingham',  initials: 'FM', accentBg: 'bg-amber-100',   accentText: 'text-amber-600'  },
-        { quote: "I use Moriah Box every week for my Sunday meal prep. The Jollof Rice kit is a lifesaver. Quality is consistent and the recipe cards are clear even if you're not a confident cook.",                                                        name: 'Kofi A.',    detail: 'Couple household, Manchester', initials: 'KA', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
+        { quote: "I use MoriahBox every week for my Sunday meal prep. The Jollof Rice kit is a lifesaver. Quality is consistent and the recipe cards are clear even if you're not a confident cook.",                                                        name: 'Kofi A.',    detail: 'Couple household, Manchester', initials: 'KA', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
       ],
     },
     cart: {
@@ -159,7 +160,7 @@ export const translations = {
       orderTypeLabel: 'How would you like to receive your order?',
       deliveryOption: 'Delivery',
       pickupOption: 'Pick up at store',
-      pickupAddressNote: '2295 rue Dezery app #2, Montreal, QC H1W 2S4',
+      pickupAddressNote: '60 Rue de Vilmur, Saint-Jean-De-Matha, QC J0K 2S0',
       chooseDate: 'Choose a delivery date',
       chooseTime: 'Choose a time window',
       noSlotsAvailable: 'No delivery slots available for the next 7 days.',
@@ -259,7 +260,7 @@ export const translations = {
     },
     driversPage: {
       heroBadge: 'For drivers',
-      heroSub: 'Have a car? Partner with Moriah Box to deliver meals and ingredient boxes in your area. Flexible hours, local routes, and reliable weekly pay.',
+      heroSub: 'Have a car? Partner with MoriahBox to deliver meals and ingredient boxes in your area. Flexible hours, local routes, and reliable weekly pay.',
       heroCta: 'Apply to drive',
       howBadge: 'Simple process',
       howTitle: 'How it works',
@@ -272,7 +273,7 @@ export const translations = {
       faqBadge: 'FAQ',
       faqTitle: 'Frequently asked questions',
       faqItems: [
-        { question: 'Who can become a Moriah Box driver?',  answer: 'Any licensed driver with a valid vehicle and a clean driving record can apply.' },
+        { question: 'Who can become a MoriahBox driver?',  answer: 'Any licensed driver with a valid vehicle and a clean driving record can apply.' },
         { question: 'How do I get paid?',                  answer: 'Earnings are processed weekly by direct deposit based on completed deliveries.' },
         { question: 'How are deliveries assigned?',        answer: 'You set your available time slots and we match orders within your delivery area.' },
         { question: 'What happens after I apply?',         answer: 'Your application will be reviewed within 2–3 business days. You will be notified by email.' },
@@ -362,7 +363,7 @@ export const translations = {
         tableLineTotal: 'Total',
         payment: 'Payment',
         pickup: 'Store pickup',
-        pickupAddress: '2295 rue Dezery app #2, Montreal, H1W 2S4, QC',
+        pickupAddress: '60 Rue de Vilmur, Saint-Jean-De-Matha, QC J0K 2S0',
         subtotal: 'Items subtotal',
         deliveryFee: 'Delivery fee',
         total: 'Total',
@@ -467,10 +468,10 @@ export const translations = {
     aboutPage: {
       badge: 'Our story',
       title: 'Real food for the African diaspora',
-      subtitle: 'We started Moriah Box to answer a simple question: why is it so hard to find authentic African home cooking when you are far from home?',
+      subtitle: 'We started MoriahBox to answer a simple question: why is it so hard to find authentic African home cooking when you are far from home?',
       missionBadge: 'Mission',
       missionTitle: 'Food that feels like home',
-      mission: 'Moriah Box was built for African singles and families who crave the flavours they grew up with — without spending hours sourcing hard-to-find ingredients or standing over a hot stove after a long day. We partner with home cooks and local drivers to deliver pre-cooked meals and ingredient boxes with recipes straight to your door.',
+      mission: 'MoriahBox was built for African singles and families who crave the flavours they grew up with — without spending hours sourcing hard-to-find ingredients or standing over a hot stove after a long day. We partner with home cooks and local drivers to deliver pre-cooked meals and ingredient boxes with recipes straight to your door.',
       valuesBadge: 'What we stand for',
       values: [
         { emoji: '🍲', title: 'Authentic flavours',   description: 'Every meal and ingredient box is crafted to reflect the real taste of African home cooking — no shortcuts, no compromises.' },
@@ -479,7 +480,7 @@ export const translations = {
       ],
       storyBadge: 'How it started',
       storyTitle: 'Born from a craving, built for a community',
-      story: 'It started with a conversation at a kitchen table in Montréal. A group of friends, all from different parts of Africa, were trying to figure out how to cook a proper Egusi soup with ingredients from a generic supermarket. Moriah Box grew from that frustration — a platform that makes it easy to order the real thing: either fully cooked and ready to eat, or as an ingredient box with a step-by-step recipe, delivered by a driver in your neighbourhood.',
+      story: 'It started with a conversation at a kitchen table in Montréal. A group of friends, all from different parts of Africa, were trying to figure out how to cook a proper Mafen soup with ingredients from a generic supermarket, without success. MoriahBox grew from that frustration — a platform that makes it easy to order the real thing: either fully cooked and ready to eat, or as an ingredient box with a step-by-step recipe, delivered by a driver in your neighbourhood.',
     },
     contactPage: {
       badge: 'Contact',
@@ -491,7 +492,7 @@ export const translations = {
       email: 'info@moriahbox.com',
       responseTime: 'We typically respond within 1–2 business days.',
       addressLabel: 'Our address',
-      address: ['2295 rue Dezery, app #2', 'Montréal, QC H1W 2S4', 'Canada'],
+      address: ['60 Rue de Vilmur', 'Saint-Jean-De-Matha, QC J0K 2S0', 'Canada'],
       orderSupportLabel: 'Order support',
       orderSupport: 'For issues with an existing order, include your order ID in the subject line and we will prioritise your request.',
     },
@@ -499,7 +500,7 @@ export const translations = {
       badge: 'Privacy policy',
       title: 'Your privacy matters',
       updatedAt: 'Last updated: June 2026',
-      intro: 'Moriah Box ("we", "us", or "our") operates the moriahbox.com website. This page explains what information we collect, how we use it, and your rights regarding that data.',
+      intro: 'MoriahBox ("we", "us", or "our") operates the moriahbox.com website. This page explains what information we collect, how we use it, and your rights regarding that data.',
       sections: [
         {
           title: 'Information we collect',
@@ -523,7 +524,63 @@ export const translations = {
         },
         {
           title: 'Contact us',
-          body: 'For privacy-related questions or requests, please email us at privacy@moriahbox.com. We will respond within 30 days.',
+          body: 'For privacy-related questions or requests, please email us at info@moriahbox.com by indicating in the subject: PRIVACY. We will respond within 15 days.',
+        },
+      ],
+    },
+    termsPage: {
+      badge: 'Terms of service',
+      title: 'Terms of service',
+      updatedAt: 'Last updated: July 2026',
+      intro: 'These terms govern your use of MoriahBox and your orders placed through our platform. By placing an order you agree to them in full.',
+      sections: [
+        {
+          title: 'The service',
+          body: 'MoriahBox is an online ordering platform operating in Quebec, Canada. We offer pre-cooked meals and ingredient boxes with recipes, available in single, couple, and family sizes, for home delivery or store pickup.',
+        },
+        {
+          title: 'Eligibility',
+          body: 'You must be 18 years of age or older to place an order. Delivery is available only to postal codes we actively serve. Orders to unsupported areas are declined at checkout.',
+        },
+        {
+          title: 'Orders and confirmation',
+          body: 'An order is initiated when you submit your payment details. It is confirmed once payment clears and a driver is assigned for delivery. MoriahBox reserves the right to cancel an order if no driver is available after all dispatch attempts, in which case you are notified and fully refunded.',
+        },
+        {
+          title: 'Pricing and payment',
+          body: 'All prices are in Canadian dollars and exclude applicable taxes (GST 5% and QST 9.975%), which are calculated and added at checkout. Payment is processed securely by Stripe. You are charged only when your order is confirmed.',
+        },
+        {
+          title: 'Delivery',
+          body: 'Deliveries are performed by independent partner drivers within your selected time window (morning, afternoon, or evening). Delivery times are estimates. MoriahBox is not liable for delays caused by weather, traffic, or other circumstances beyond our control.',
+        },
+        {
+          title: 'Cancellations and refunds',
+          body: 'You may cancel a pending order before payment is processed. Once an order is paid and confirmed, cancellation is not available. If MoriahBox cannot fulfil your order due to driver unavailability, you will receive a full refund within 5–10 business days to your original payment method.',
+        },
+        {
+          title: 'Driver partners',
+          body: 'Deliveries are performed by independent contractors, not MoriahBox employees. MoriahBox coordinates dispatch and applies reasonable care in vetting drivers, but is not responsible for the individual conduct of drivers beyond that standard.',
+        },
+        {
+          title: 'Acceptable use',
+          body: 'You agree not to place fraudulent or test orders, initiate unwarranted chargebacks, or otherwise abuse the platform. Accounts found in violation may be suspended without notice.',
+        },
+        {
+          title: 'Limitation of liability',
+          body: "MoriahBox's liability is limited to the amount paid for the affected order. We are not liable for indirect or consequential damages, dissatisfaction with food taste or texture, or delays outside our control.",
+        },
+        {
+          title: 'Governing law',
+          body: 'These terms are governed by the laws of the Province of Quebec and the applicable federal laws of Canada. Any dispute shall be submitted to the courts of Quebec.',
+        },
+        {
+          title: 'Changes to these terms',
+          body: 'We may update these terms at any time. Continued use of MoriahBox after changes are posted constitutes your acceptance of the revised terms.',
+        },
+        {
+          title: 'Contact',
+          body: 'For questions about these terms, email us at info@moriahbox.com with the subject line: TERMS.',
         },
       ],
     },
@@ -575,8 +632,9 @@ export const translations = {
       ],
     },
     howItWorks: {
+      audienceBadge: 'Pour les clients',
       badge: 'Simple du début à la fin',
-      title: 'Comment fonctionne Moriah Box',
+      title: 'Comment fonctionne MoriahBox',
       sub: 'De la navigation à votre première bouchée — tout le processus prend des minutes, pas des heures.',
       steps: [
         { number: '01', emoji: '🛒', title: 'Parcourez le menu',                    description: "Choisissez parmi les repas précuits prêts à manger ou les boîtes d'ingrédients avec recettes détaillées." },
@@ -661,22 +719,22 @@ export const translations = {
       badge: 'Pour les livreurs',
       titleLines: ['Transformez votre temps libre', 'en'],
       titleAccent: 'vrai revenu.',
-      sub: "Vous avez une voiture ? Devenez partenaire Moriah Box pour livrer des repas et boîtes d'ingrédients dans votre secteur. Horaires flexibles, trajets locaux et paiement hebdomadaire fiable.",
+      sub: "Vous avez une voiture et un permis de conduire valide ? Devenez partenaire MoriahBox pour livrer des repas et boîtes d'ingrédients dans votre secteur. Horaires flexibles, trajets locaux et paiement hebdomadaire fiable.",
       cta: 'Postuler comme livreur',
       perks: [
+        { emoji: '🚀', label: 'Recrutement rapide' },
         { emoji: '⏱️', label: 'Définissez vos horaires' },
-        { emoji: '💵', label: 'Paiement hebdomadaire, sans délai' },
         { emoji: '📍', label: 'Trajets locaux uniquement' },
-        { emoji: '🚀', label: 'Intégration rapide' },
+        { emoji: '💵', label: 'Paiement hebdomadaire, sans délai' },
       ],
     },
     testimonials: {
-      badge: 'Ce que disent les clients',
-      title: 'Une cuisine qui fait penser à la maison',
+      badge: 'Ce que disent des clients',
+      title: 'Une cuisine qui fait penser au pays',
       items: [
         { quote: "La soupe Egusi avait exactement le goût de ce que je mangeais en grandissant. J'ai pleuré un peu — de bonheur. La livraison était rapide et l'emballage gardait tout chaud.",                                                              name: 'Aminata D.', detail: 'Célibataire, Londres',    initials: 'AD', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
         { quote: "En tant que maman de trois enfants débordée, je n'ai pas le temps de trouver tous les ingrédients pour cuisiner vraiment africain. Les boîtes ont tout changé — les enfants participent maintenant.",                                       name: 'Fatou M.',   detail: 'Famille de 5, Birmingham', initials: 'FM', accentBg: 'bg-amber-100',   accentText: 'text-amber-600'  },
-        { quote: "J'utilise Moriah Box chaque semaine pour ma préparation du dimanche. Le kit Riz Jollof est une bouée de sauvetage. La qualité est constante et les fiches recettes sont claires, même si vous n'êtes pas un cuisinier confiant.",          name: 'Kofi A.',    detail: 'En couple, Manchester',   initials: 'KA', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
+        { quote: "J'utilise MoriahBox chaque semaine pour ma préparation du dimanche. Le kit Riz Jollof est une bouée de sauvetage. La qualité est constante et les fiches recettes sont claires, même si vous n'êtes pas un cuisinier confiant.",          name: 'Kofi A.',    detail: 'En couple, Manchester',   initials: 'KA', accentBg: 'bg-[#e8f5ee]', accentText: 'text-[#2d6e42]' },
       ],
     },
     cart: {
@@ -698,7 +756,7 @@ export const translations = {
       orderTypeLabel: 'Comment souhaitez-vous recevoir votre commande ?',
       deliveryOption: 'Livraison',
       pickupOption: 'Retrait en magasin',
-      pickupAddressNote: '2295 rue Dezery app #2, Montréal, QC H1W 2S4',
+      pickupAddressNote: '60 Rue de Vilmur, Saint-Jean-De-Matha, QC J0K 2S0',
       chooseDate: 'Choisissez une date de livraison',
       chooseTime: 'Choisissez un créneau horaire',
       noSlotsAvailable: 'Aucun créneau de livraison disponible pour les 7 prochains jours.',
@@ -798,7 +856,7 @@ export const translations = {
     },
     driversPage: {
       heroBadge: 'Pour les livreurs',
-      heroSub: "Vous avez une voiture ? Devenez partenaire Moriah Box pour livrer des repas et boîtes d'ingrédients dans votre secteur. Horaires flexibles, trajets locaux et paiement hebdomadaire fiable.",
+      heroSub: "Vous avez une voiture ? Devenez partenaire MoriahBox pour livrer des repas et boîtes d'ingrédients dans votre secteur. Horaires flexibles, trajets locaux et paiement hebdomadaire fiable.",
       heroCta: 'Postuler comme livreur',
       howBadge: 'Processus simple',
       howTitle: 'Comment ça marche',
@@ -811,7 +869,7 @@ export const translations = {
       faqBadge: 'FAQ',
       faqTitle: 'Questions fréquentes',
       faqItems: [
-        { question: 'Qui peut devenir livreur Moriah Box ?',              answer: "Tout conducteur titulaire d'un permis valide, avec un véhicule en règle et un bon dossier de conduite, peut postuler." },
+        { question: 'Qui peut devenir livreur MoriahBox ?',              answer: "Tout conducteur titulaire d'un permis valide, avec un véhicule en règle et un bon dossier de conduite, peut postuler." },
         { question: 'Comment suis-je payé(e) ?',                         answer: 'Les gains sont versés chaque semaine par virement direct, selon le nombre de livraisons effectuées.' },
         { question: 'Comment les livraisons me sont-elles attribuées ?',  answer: 'Vous définissez vos créneaux disponibles et nous assignons les commandes dans votre zone de livraison.' },
         { question: 'Que se passe-t-il après ma candidature ?',          answer: "Votre candidature sera examinée dans un délai de 2 à 3 jours ouvrables. Vous serez informé(e) par courriel." },
@@ -901,7 +959,7 @@ export const translations = {
         tableLineTotal: 'Total',
         payment: 'Paiement',
         pickup: 'Retrait en magasin',
-        pickupAddress: '2295 rue Dezery app #2, Montréal, H1W 2S4, QC',
+        pickupAddress: '60 Rue de Vilmur, Saint-Jean-De-Matha, QC J0K 2S0',
         subtotal: 'Sous-total articles',
         deliveryFee: 'Frais de livraison',
         total: 'Total',
@@ -1006,10 +1064,10 @@ export const translations = {
     aboutPage: {
       badge: 'Notre histoire',
       title: 'Une cuisine authentique pour la diaspora africaine',
-      subtitle: "Moriah Box est né d'une question simple : pourquoi est-il si difficile de trouver une vraie cuisine africaine faite maison quand on est loin de chez soi ?",
+      subtitle: "MoriahBox est né d'une question simple : pourquoi est-il si difficile de trouver une vraie cuisine africaine faite maison quand on est loin de chez soi ?",
       missionBadge: 'Mission',
       missionTitle: 'Une cuisine qui fait penser à la maison',
-      mission: "Moriah Box a été créé pour les célibataires et familles africaines qui ont envie des saveurs de leur enfance — sans passer des heures à chercher des ingrédients introuvables ou à faire la cuisine après une longue journée. Nous collaborons avec des cuisiniers locaux et des livreurs partenaires pour livrer directement chez vous des repas précuits et des boîtes d'ingrédients avec recettes.",
+      mission: "MoriahBox a été créé pour les célibataires et familles africaines qui ont envie des saveurs de leur enfance — sans passer des heures à chercher des ingrédients introuvables ou à faire la cuisine après une longue journée. Nous collaborons avec des cuisiniers locaux et des livreurs partenaires pour livrer directement chez vous des repas précuits et des boîtes d'ingrédients avec recettes.",
       valuesBadge: 'Nos valeurs',
       values: [
         { emoji: '🍲', title: 'Saveurs authentiques', description: "Chaque repas et boîte d'ingrédients est conçu pour refléter le vrai goût de la cuisine africaine maison — sans compromis." },
@@ -1018,7 +1076,7 @@ export const translations = {
       ],
       storyBadge: 'Les débuts',
       storyTitle: "Né d'une envie, construit pour une communauté",
-      story: "Tout a commencé autour d'une table de cuisine à Montréal. Un groupe d'amis, originaires de différents pays d'Afrique, cherchait comment préparer une soupe Egusi authentique avec des ingrédients d'un supermarché ordinaire. Moriah Box est né de cette frustration — une plateforme qui permet de commander facilement la vraie chose : soit entièrement cuisinée et prête à manger, soit sous forme de boîte d'ingrédients avec une recette détaillée, livrée par un chauffeur de votre quartier.",
+      story: "Tout a commencé autour d'une table de cuisine à Montréal. Un groupe d'amis, originaires de différents pays d'Afrique, cherchait comment préparer une soupe Mafen authentique avec des ingrédients d'un supermarché ordinaire, sans succès. MoriahBox est né de cette frustration — une plateforme qui permet de commander facilement la vraie chose : soit entièrement cuisinée et prête à manger, soit sous forme de boîte d'ingrédients avec une recette détaillée, livrée par un chauffeur de votre quartier.",
     },
     contactPage: {
       badge: 'Contact',
@@ -1030,7 +1088,7 @@ export const translations = {
       email: 'info@moriahbox.com',
       responseTime: 'Nous répondons généralement sous 1 à 2 jours ouvrables.',
       addressLabel: 'Notre adresse',
-      address: ['2295 rue Dezery, app #2', 'Montréal, QC H1W 2S4', 'Canada'],
+      address: ['60 Rue de Vilmur', 'Saint-Jean-De-Matha, QC J0K 2S0', 'Canada'],
       orderSupportLabel: 'Support commande',
       orderSupport: "Pour tout problème lié à une commande existante, incluez votre numéro de commande dans l'objet de votre e-mail et nous traiterons votre demande en priorité.",
     },
@@ -1038,7 +1096,7 @@ export const translations = {
       badge: 'Politique de confidentialité',
       title: 'Votre vie privée compte',
       updatedAt: 'Dernière mise à jour : juin 2026',
-      intro: 'Moriah Box (« nous ») exploite le site moriahbox.com. Cette page explique quelles informations nous collectons, comment nous les utilisons et vos droits concernant ces données.',
+      intro: 'MoriahBox (« nous ») exploite le site moriahbox.com. Cette page explique quelles informations nous collectons, comment nous les utilisons et vos droits concernant ces données.',
       sections: [
         {
           title: 'Informations collectées',
@@ -1062,7 +1120,63 @@ export const translations = {
         },
         {
           title: 'Nous contacter',
-          body: 'Pour toute question ou demande relative à la confidentialité, écrivez-nous à privacy@moriahbox.com. Nous répondrons dans un délai de 30 jours.',
+          body: 'Pour toute question ou demande relative à la confidentialité, écrivez-nous à info@moriahbox.com en indiquant dans l\'objet : CONFIDENTIALITÉ. Nous répondrons dans un délai de 15 jours.',
+        },
+      ],
+    },
+    termsPage: {
+      badge: 'Conditions d\'utilisation',
+      title: 'Conditions d\'utilisation',
+      updatedAt: 'Dernière mise à jour : juillet 2026',
+      intro: 'Les présentes conditions régissent votre utilisation de MoriahBox et les commandes que vous passez sur notre plateforme. En passant une commande, vous les acceptez intégralement.',
+      sections: [
+        {
+          title: 'Le service',
+          body: 'MoriahBox est une plateforme de commande en ligne opérant au Québec, Canada. Nous proposons des repas précuits et des boîtes d\'ingrédients avec recettes, disponibles en format individuel, duo et famille, pour la livraison à domicile ou le retrait en magasin.',
+        },
+        {
+          title: 'Admissibilité',
+          body: 'Vous devez avoir 18 ans ou plus pour passer une commande. La livraison est disponible uniquement dans les codes postaux que nous desservons activement. Les commandes vers des zones non couvertes sont refusées lors du paiement.',
+        },
+        {
+          title: 'Commandes et confirmation',
+          body: 'Une commande est initiée lorsque vous soumettez vos informations de paiement. Elle est confirmée dès que le paiement est approuvé et qu\'un livreur est assigné. MoriahBox se réserve le droit d\'annuler une commande si aucun livreur n\'est disponible après toutes les tentatives de distribution, auquel cas vous êtes notifié et intégralement remboursé.',
+        },
+        {
+          title: 'Prix et paiement',
+          body: 'Tous les prix sont en dollars canadiens et excluent les taxes applicables (TPS 5 % et TVQ 9,975 %), calculées et ajoutées lors du paiement. Le paiement est traité de manière sécurisée par Stripe. Vous n\'êtes débité que lors de la confirmation de votre commande.',
+        },
+        {
+          title: 'Livraison',
+          body: 'Les livraisons sont effectuées par des livreurs partenaires indépendants dans le créneau horaire que vous sélectionnez (matin, après-midi ou soir). Les délais sont indicatifs. MoriahBox n\'est pas responsable des retards causés par la météo, la circulation ou toute autre circonstance indépendante de notre volonté.',
+        },
+        {
+          title: 'Annulations et remboursements',
+          body: 'Vous pouvez annuler une commande en attente avant que le paiement ne soit traité. Une fois la commande payée et confirmée, l\'annulation n\'est plus possible. Si MoriahBox ne peut pas exécuter votre commande faute de livreur disponible, vous recevrez un remboursement complet sous 5 à 10 jours ouvrables via votre mode de paiement initial.',
+        },
+        {
+          title: 'Livreurs partenaires',
+          body: 'Les livraisons sont effectuées par des contractants indépendants, et non des employés de MoriahBox. MoriahBox coordonne la distribution et applique une diligence raisonnable dans la sélection des livreurs, mais n\'est pas responsable de leur comportement individuel au-delà de cette norme.',
+        },
+        {
+          title: 'Utilisation acceptable',
+          body: 'Vous vous engagez à ne pas passer de commandes frauduleuses ou de test, à ne pas initier de rétrofacturations injustifiées, ni à abuser de la plateforme de quelque manière que ce soit. Les comptes en infraction peuvent être suspendus sans préavis.',
+        },
+        {
+          title: 'Limitation de responsabilité',
+          body: 'La responsabilité de MoriahBox est limitée au montant payé pour la commande concernée. Nous ne sommes pas responsables des dommages indirects ou consécutifs, de l\'insatisfaction liée au goût ou à la texture des aliments, ni des retards indépendants de notre volonté.',
+        },
+        {
+          title: 'Droit applicable',
+          body: 'Les présentes conditions sont régies par les lois de la Province de Québec et les lois fédérales du Canada applicables. Tout litige sera soumis aux tribunaux du Québec.',
+        },
+        {
+          title: 'Modifications',
+          body: 'Nous pouvons mettre à jour ces conditions à tout moment. L\'utilisation continue de MoriahBox après la publication des modifications vaut acceptation des nouvelles conditions.',
+        },
+        {
+          title: 'Nous contacter',
+          body: 'Pour toute question relative aux présentes conditions, écrivez-nous à info@moriahbox.com avec pour objet : CONDITIONS.',
         },
       ],
     },

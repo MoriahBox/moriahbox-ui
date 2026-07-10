@@ -10,6 +10,9 @@ export function HowItWorks() {
     <section id="how-it-works" className="bg-[#f2faf5] border-b border-[#d8e8dc] px-6 py-20 md:px-12">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
+          <p className="text-[11px] font-semibold text-[#2d6e42] uppercase tracking-[1.5px] mb-3">
+            {howItWorks.audienceBadge}
+          </p>
           <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-5">
             {howItWorks.badge}
           </span>

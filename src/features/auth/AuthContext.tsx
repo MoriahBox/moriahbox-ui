@@ -50,11 +50,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setDriverId(meta['driverId'] ?? null)
     }
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       applySession(session)
-      setIsReady(true)
+      if (event === 'INITIAL_SESSION') setIsReady(true)
     })
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session))
     return () => subscription.unsubscribe()
   }, [supabase])
 

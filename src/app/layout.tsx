@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Moriah Box — African Home Cooking, Delivered',
+  title: 'MoriahBox — African Home Cooking, Delivered',
   description:
     'Pre-cooked meals and ingredient boxes with recipes, made for African families and singles who want the taste of home.',
 }

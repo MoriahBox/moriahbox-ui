@@ -399,6 +399,8 @@ export const translations = {
         confirmDelete: 'Confirm',
         cancelDelete: 'Cancel',
       },
+      suspendConflict: 'Cannot suspend: driver has active orders that cannot be reassigned to another driver.',
+      actionError: 'Action failed. Please try again.',
       deleteConflict: 'Cannot delete: driver has active orders.',
       deleteError: 'Could not delete driver. Please try again.',
       availability: {
@@ -995,6 +997,8 @@ export const translations = {
         confirmDelete: 'Confirmer',
         cancelDelete: 'Annuler',
       },
+      suspendConflict: 'Impossible de suspendre : le livreur a des commandes actives qui ne peuvent pas être réassignées.',
+      actionError: 'Action échouée. Veuillez réessayer.',
       deleteConflict: 'Impossible de supprimer : le livreur a des commandes actives.',
       deleteError: 'Impossible de supprimer le livreur. Veuillez réessayer.',
       availability: {

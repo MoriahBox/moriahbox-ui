@@ -71,6 +71,7 @@ export default function AdminDriversPage() {
   const [panel, setPanel] = useState<AvailabilityPanelState>(defaultPanel())
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null)
   const [deleteError, setDeleteError] = useState<string | null>(null)
+  const [actionError, setActionError] = useState<string | null>(null)
 
   useEffect(() => {
     apiFetch(`/api/drivers?size=50&sort=name,asc`)
@@ -125,13 +126,20 @@ export default function AdminDriversPage() {
   }
 
   async function doAction(driverId: string, action: 'approve' | 'reject' | 'suspend') {
+    setActionError(null)
     setActionLoading(driverId + ':' + action)
     try {
       const res = await apiFetch(`/api/drivers/${driverId}/${action}`, { method: 'POST' })
       if (res.ok) {
         updateDriverInList(await res.json() as Driver)
         if (availabilityPanel === driverId) setAvailabilityPanel(null)
+      } else if (res.status === 409 && action === 'suspend') {
+        setActionError(p.suspendConflict)
+      } else {
+        setActionError(p.actionError)
       }
+    } catch {
+      setActionError(p.actionError)
     } finally {
       setActionLoading(null)
     }
@@ -268,6 +276,7 @@ export default function AdminDriversPage() {
           )}
           {loadError && <p className="text-[14px] text-[#5a6e60]">{p.error}</p>}
           {drivers && drivers.length === 0 && <p className="text-[14px] text-[#5a6e60]">{p.empty}</p>}
+          {actionError && <p className="text-[13px] text-red-600 mb-4">{actionError}</p>}
           {deleteError && <p className="text-[13px] text-red-600 mb-4">{deleteError}</p>}
 
           {drivers && drivers.length > 0 && (

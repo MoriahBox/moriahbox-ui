@@ -10,7 +10,7 @@ export function HowItWorks() {
     <section id="how-it-works" className="bg-[#f2faf5] border-b border-[#d8e8dc] px-6 py-20 md:px-12">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-5">
+          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-12">
             {howItWorks.title}
           </h2>
           <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-3">

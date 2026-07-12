@@ -32,7 +32,7 @@ export const translations = {
         { emoji: '🍲', label: 'Egusi Soup',       sub: 'Ready to eat',       bg: 'bg-[#e8f5ee]' },
         { emoji: '📦', label: 'Ingredient Box',   sub: 'Cook with recipe',   bg: 'bg-[#fdf3e0]' },
         { emoji: '🍛', label: 'Jollof Rice',      sub: 'Family size',        bg: 'bg-[#e4f0ea]' },
-        { emoji: '🚗', label: 'Drive with us',    sub: 'Earn on your terms', bg: 'bg-amber-100'  },
+        { emoji: '🚙', label: 'Drive with us',    sub: 'Earn on your terms', bg: 'bg-amber-100'  },
       ],
     },
     howItWorks: {
@@ -43,8 +43,8 @@ export const translations = {
       steps: [
         { number: '01', emoji: '🛒', title: 'Browse the menu',          description: 'Choose from pre-cooked meals ready to eat or ingredient boxes with step-by-step recipes.' },
         { number: '02', emoji: '📦', title: 'Pick your box size',        description: 'Single, couple, or family — select the portion that fits your household.' },
-        { number: '03', emoji: '🚗', title: 'We deliver to you',         description: 'A partner driver brings your order straight to your door, fresh and on time.' },
-        { number: '04', emoji: '🍲', title: 'Cook or eat — you choose',  description: 'Heat and serve in minutes, or follow the included recipe for the full kitchen experience.' },
+        { number: '03', emoji: '🛵', title: 'We deliver to you',         description: 'A partner driver brings your order straight to your door, fresh and on time.' },
+        { number: '04', emoji: '🍽️', title: 'Cook or eat — you choose',  description: 'Heat and serve in minutes, or follow the included recipe for the full kitchen experience.' },
       ],
     },
     menuItemTypes: {
@@ -128,7 +128,7 @@ export const translations = {
       perks: [
         { emoji: '🚀', label: 'Quick onboarding' },
         { emoji: '⏱️', label: 'Set your own hours' },
-        { emoji: '📍', label: 'Local routes only' },
+        { emoji: '🗺️', label: 'Local routes only' },
         { emoji: '💵', label: 'Weekly pay, no delays' },
       ],
     },
@@ -633,7 +633,7 @@ export const translations = {
         { emoji: '🍲', label: 'Soupe Egusi',         sub: 'Prêt à manger',       bg: 'bg-[#e8f5ee]' },
         { emoji: '📦', label: "Boîte d'ingrédients", sub: 'Cuisinez avec recette', bg: 'bg-[#fdf3e0]' },
         { emoji: '🍛', label: 'Riz Jollof',           sub: 'Format famille',      bg: 'bg-[#e4f0ea]' },
-        { emoji: '🚗', label: 'Livrez avec nous',     sub: 'Gagnez à votre rythme', bg: 'bg-amber-100' },
+        { emoji: '🚙', label: 'Livrez avec nous',     sub: 'Gagnez à votre rythme', bg: 'bg-amber-100' },
       ],
     },
     howItWorks: {
@@ -644,8 +644,8 @@ export const translations = {
       steps: [
         { number: '01', emoji: '🛒', title: 'Parcourez le menu',                    description: "Choisissez parmi les repas précuits prêts à manger ou les boîtes d'ingrédients avec recettes détaillées." },
         { number: '02', emoji: '📦', title: 'Choisissez votre format',              description: 'Individuel, couple ou famille — sélectionnez la portion adaptée à votre foyer.' },
-        { number: '03', emoji: '🚗', title: 'Nous vous livrons',                    description: "Un livreur partenaire apporte votre commande directement à votre porte, fraîche et à l'heure." },
-        { number: '04', emoji: '🍲', title: 'Cuisinez ou mangez — à vous de choisir', description: "Réchauffez et servez en quelques minutes, ou suivez la recette incluse pour l'expérience cuisine complète." },
+        { number: '03', emoji: '🛵', title: 'Nous vous livrons',                    description: "Un livreur partenaire apporte votre commande directement à votre porte, fraîche et à l'heure." },
+        { number: '04', emoji: '🍽️', title: 'Cuisinez ou mangez — à vous de choisir', description: "Réchauffez et servez en quelques minutes, ou suivez la recette incluse pour l'expérience cuisine complète." },
       ],
     },
     menuItemTypes: {
@@ -729,7 +729,7 @@ export const translations = {
       perks: [
         { emoji: '🚀', label: 'Recrutement rapide' },
         { emoji: '⏱️', label: 'Définissez vos horaires' },
-        { emoji: '📍', label: 'Trajets locaux uniquement' },
+        { emoji: '🗺️', label: 'Trajets locaux uniquement' },
         { emoji: '💵', label: 'Paiement hebdomadaire, sans délai' },
       ],
     },

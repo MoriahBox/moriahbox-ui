@@ -37,7 +37,7 @@ export const translations = {
     },
     howItWorks: {
       audienceBadge: 'For customers',
-      badge: 'Simple from start to finish',
+      badge: ['Simple from', 'start', 'to', 'finish'],
       title: 'How MoriahBox works',
       sub: 'From browsing to your first bite — the whole process takes minutes, not hours.',
       steps: [
@@ -638,7 +638,7 @@ export const translations = {
     },
     howItWorks: {
       audienceBadge: 'Pour les clients',
-      badge: 'Simple du début à la fin',
+      badge: ['Simple du', 'début', 'à la', 'fin'],
       title: 'Comment fonctionne MoriahBox',
       sub: 'De la navigation à votre première bouchée — tout le processus prend des minutes, pas des heures.',
       steps: [

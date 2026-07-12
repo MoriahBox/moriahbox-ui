@@ -16,9 +16,12 @@ export function HowItWorks() {
           <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-3">
             {howItWorks.audienceBadge}
           </span>
-          <p className="text-[11px] font-semibold text-[#2d6e42] uppercase tracking-[1.5px] mb-4">
-            {howItWorks.badge}
-          </p>
+          <h3 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-4">
+            {howItWorks.badge[0]}{' '}
+            <em className="not-italic text-amber-500">{howItWorks.badge[1]}</em>{' '}
+            {howItWorks.badge[2]}{' '}
+            <em className="not-italic text-amber-500">{howItWorks.badge[3]}</em>
+          </h3>
           <p className="text-[15px] text-[#5a6e60] leading-relaxed max-w-md mx-auto">
             {howItWorks.sub}
           </p>

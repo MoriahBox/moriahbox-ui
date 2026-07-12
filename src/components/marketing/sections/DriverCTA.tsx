@@ -19,9 +19,7 @@ export function DriverCTA() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-5">
-            {driverCTA.titleLines[0]}
-            <br />
-            {driverCTA.titleLines[1]}{' '}
+            {driverCTA.titleLines[0]}{' '}{driverCTA.titleLines[1]}{' '}
             <em className="not-italic text-amber-500">{driverCTA.titleAccent}</em>
           </h2>
           <p className="text-[15px] text-[#5a6e60] leading-relaxed mb-8 max-w-sm">

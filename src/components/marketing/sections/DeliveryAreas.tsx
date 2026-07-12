@@ -43,9 +43,9 @@ export function DeliveryAreas() {
 
         {/* Loading skeletons */}
         {loading && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {[1, 2, 3, 4].map(i => (
-              <div key={i} className="h-16 rounded-lg bg-[#d8ead1] animate-pulse" />
+              <div key={i} className="h-16 w-44 rounded-lg bg-[#d8ead1] animate-pulse" />
             ))}
           </div>
         )}
@@ -57,7 +57,7 @@ export function DeliveryAreas() {
 
         {/* Area cards */}
         {!loading && areas.length > 0 && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {areas.map(area => (
               <div
                 key={area.id}

@@ -12,8 +12,8 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <DeliveryAreas />
         <HowItWorks />
+        <DeliveryAreas />
         <DriverCTA />
         <Testimonials />
       </main>

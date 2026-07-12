@@ -9,12 +9,15 @@ export function DriverCTA() {
 
   return (
     <section className="bg-[#fffaf0] border-b border-[#d8e8dc] px-6 py-20 md:px-12">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-        <div>
-          <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded">
             {driverCTA.badge}
           </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
           <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-5">
             {driverCTA.titleLines[0]}
             <br />
@@ -45,6 +48,7 @@ export function DriverCTA() {
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </section>
   )

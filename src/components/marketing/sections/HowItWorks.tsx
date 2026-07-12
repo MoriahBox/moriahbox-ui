@@ -10,16 +10,16 @@ export function HowItWorks() {
     <section id="how-it-works" className="bg-[#f2faf5] border-b border-[#d8e8dc] px-6 py-20 md:px-12">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
-          <p className="text-[11px] font-semibold text-[#2d6e42] uppercase tracking-[1.5px] mb-3">
-            {howItWorks.audienceBadge}
-          </p>
-          <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-5">
-            {howItWorks.badge}
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight">
+          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1a4a2a] leading-tight mb-5">
             {howItWorks.title}
           </h2>
-          <p className="mt-4 text-[15px] text-[#5a6e60] leading-relaxed max-w-md mx-auto">
+          <span className="inline-block bg-[#1a4a2a] text-white text-[11px] font-medium tracking-[1.5px] uppercase px-3.5 py-1.5 rounded mb-3">
+            {howItWorks.audienceBadge}
+          </span>
+          <p className="text-[11px] font-semibold text-[#2d6e42] uppercase tracking-[1.5px] mb-4">
+            {howItWorks.badge}
+          </p>
+          <p className="text-[15px] text-[#5a6e60] leading-relaxed max-w-md mx-auto">
             {howItWorks.sub}
           </p>
         </div>

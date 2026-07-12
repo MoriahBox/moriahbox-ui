@@ -255,7 +255,9 @@ export const translations = {
       successTitle: 'Application received!',
       successSub: "We'll review your application within 2–3 business days and reach out by email.",
       backToHome: 'Back to home',
-      errorDuplicate: 'An application already exists for this email or licence number.',
+      errorDuplicate: 'An application already exists for this email.',
+      errorDuplicateLicense: 'An application already exists for this licence number.',
+      errorSuspendedReapply: 'A suspended account exists for this email. Please contact us at info@moriahbox.com to request reactivation.',
       errorGeneric: 'Something went wrong. Please try again.',
     },
     driversPage: {
@@ -854,7 +856,9 @@ export const translations = {
       successTitle: 'Candidature reçue !',
       successSub: 'Nous examinerons votre candidature sous 2 à 3 jours ouvrables et vous contacterons par e-mail.',
       backToHome: 'Retour à l\'accueil',
-      errorDuplicate: 'Une candidature existe déjà pour cet e-mail ou ce numéro de permis.',
+      errorDuplicate: 'Une candidature existe déjà pour cet e-mail.',
+      errorDuplicateLicense: 'Une candidature existe déjà pour ce numéro de permis.',
+      errorSuspendedReapply: 'Un compte suspendu existe pour cet e-mail. Veuillez nous contacter à info@moriahbox.com pour demander une réactivation.',
       errorGeneric: 'Une erreur est survenue. Veuillez réessayer.',
     },
     driversPage: {

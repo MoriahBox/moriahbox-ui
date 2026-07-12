@@ -54,7 +54,11 @@ export default function DriverApplyPage() {
       })
 
       if (res.status === 409) {
-        setError(p.errorDuplicate)
+        const body = await res.json().catch(() => null)
+        const code = body?.code
+        if (code === 'SUSPENDED_DRIVER') setError(p.errorSuspendedReapply)
+        else if (code === 'DUPLICATE_LICENSE') setError(p.errorDuplicateLicense)
+        else setError(p.errorDuplicate)
         return
       }
       if (!res.ok) {

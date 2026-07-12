@@ -394,6 +394,7 @@ export const translations = {
         dashboard: 'Dashboard',
         reject: 'Reject',
         suspend: 'Suspend',
+        reactivate: 'Reactivate',
         setAvailability: 'Set availability',
         delete: 'Delete',
         confirmDelete: 'Confirm',
@@ -401,7 +402,7 @@ export const translations = {
       },
       suspendConflict: 'Cannot suspend: driver has active orders that cannot be reassigned to another driver.',
       actionError: 'Action failed. Please try again.',
-      deleteConflict: 'Cannot delete: driver has active orders.',
+      deleteConflict: 'Cannot delete: this driver has order history on record and must be retained for compliance. To reactivate, use the Reactivate button.',
       deleteError: 'Could not delete driver. Please try again.',
       availability: {
         title: 'Set availability',
@@ -992,6 +993,7 @@ export const translations = {
         dashboard: 'Tableau de bord',
         reject: 'Refuser',
         suspend: 'Suspendre',
+        reactivate: 'Réactiver',
         setAvailability: 'Définir les disponibilités',
         delete: 'Supprimer',
         confirmDelete: 'Confirmer',
@@ -999,7 +1001,7 @@ export const translations = {
       },
       suspendConflict: 'Impossible de suspendre : le livreur a des commandes actives qui ne peuvent pas être réassignées.',
       actionError: 'Action échouée. Veuillez réessayer.',
-      deleteConflict: 'Impossible de supprimer : le livreur a des commandes actives.',
+      deleteConflict: 'Impossible de supprimer : ce livreur a un historique de commandes et doit être conservé pour la conformité. Pour le réactiver, utilisez le bouton Réactiver.',
       deleteError: 'Impossible de supprimer le livreur. Veuillez réessayer.',
       availability: {
         title: 'Définir les disponibilités',

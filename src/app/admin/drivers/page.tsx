@@ -321,7 +321,7 @@ export default function AdminDriversPage() {
                         )}
                         {(driver.status === 'SUSPENDED' || driver.status === 'REJECTED') && (
                           <>
-                            <ActionButton label={p.actions.approve} loading={isActing('approve')} onClick={() => doAction(driver.id, 'approve')} variant="green" />
+                            <ActionButton label={driver.status === 'SUSPENDED' ? p.actions.reactivate : p.actions.approve} loading={isActing('approve')} onClick={() => doAction(driver.id, 'approve')} variant="green" />
                             {deleteConfirmId === driver.id ? (
                               <>
                                 <ActionButton label={p.actions.confirmDelete} loading={isActing('delete')} onClick={() => deleteDriver(driver.id)} variant="red" />

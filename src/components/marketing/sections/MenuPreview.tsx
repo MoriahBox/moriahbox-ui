@@ -21,7 +21,7 @@ const TYPE_VISUAL = {
 const SLIDE_INTERVAL = 3500
 
 export function MenuPreview() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const { menuPreview, menuItemTypes } = t
   const [apiItems, setApiItems] = useState<ApiMenuItem[] | null>(null)
   const [current, setCurrent] = useState(0)
@@ -29,7 +29,7 @@ export function MenuPreview() {
 
   useEffect(() => {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    fetch(`${base}/api/menu?size=8&sort=name,asc`)
+    fetch(`${base}/api/menu?size=8&language=${lang}`)
       .then(r => r.json())
       .then(data => setApiItems(data.content ?? []))
       .catch(() => setApiItems([]))

@@ -17,7 +17,7 @@ const TYPE_CONFIG = {
 } as const
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const { hero, menuItemTypes } = t
   const driveCard = hero.cards[3]
 
@@ -25,7 +25,7 @@ export function Hero() {
 
   useEffect(() => {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    fetch(`${base}/api/menu?size=20&sort=name,asc`)
+    fetch(`${base}/api/menu?size=20&language=${lang}`)
       .then(r => r.json())
       .then(data => {
         const all: HeroMenuItem[] = data.content ?? []

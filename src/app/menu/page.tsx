@@ -40,28 +40,21 @@ export default function MenuPage() {
     addItem({ menuItemId: item.id, itemName: item.name, boxSize: size, price, quantity: 1 })
   }
 
-  useEffect(() => {
+  const fetchItems = () => {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    fetch(`${base}/api/menu?size=50&sort=name,asc`)
+    fetch(`${base}/api/menu?size=50&language=${lang}`)
       .then(r => r.json())
       .then(data => setItems(data.content))
       .catch(() => setFetchError(true))
-  }, [])
-
-  function handleSaved(saved: MenuItem) {
-    setItems(prev => {
-      if (!prev) return [saved]
-      const exists = prev.some(i => i.id === saved.id)
-      const updated = exists
-        ? prev.map(i => i.id === saved.id ? saved : i)
-        : [...prev, saved]
-      return updated.sort((a, b) => a.name.localeCompare(b.name))
-    })
   }
+
+  useEffect(() => { fetchItems() }, [lang])
+
+  function handleSaved(_saved: MenuItem) { fetchItems() }
 
   async function handleOpenEdit(item: MenuItem) {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    const res = await fetch(`${base}/api/menu/${item.id}`)
+    const res = await fetch(`${base}/api/menu/${item.id}?language=${lang}`)
     setModal(res.ok ? await res.json() as MenuItem : item)
   }
 

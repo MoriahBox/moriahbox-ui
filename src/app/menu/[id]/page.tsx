@@ -33,16 +33,18 @@ export default function MenuItemPage() {
   const [error, setError] = useState(false)
   const [editOpen, setEditOpen] = useState(false)
 
-  useEffect(() => {
+  const fetchItem = () => {
     const base = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
-    fetch(`${base}/api/menu/${id}`)
+    fetch(`${base}/api/menu/${id}?language=${lang}`)
       .then(async r => {
         if (r.status === 404) { setNotFound(true); return }
         if (!r.ok) throw new Error()
         setItem(await r.json() as MenuItem)
       })
       .catch(() => setError(true))
-  }, [id])
+  }
+
+  useEffect(() => { fetchItem() }, [id, lang])
 
   const backLink = (
     <Link
@@ -277,7 +279,7 @@ export default function MenuItemPage() {
         <MenuItemEditDialog
           mode={editOpen ? item : null}
           onClose={() => setEditOpen(false)}
-          onSaved={updated => { setItem(updated); setEditOpen(false) }}
+          onSaved={() => fetchItem()}
         />
       )}
 

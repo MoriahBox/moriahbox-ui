@@ -12,8 +12,9 @@ export interface MenuImage {
 
 export interface MenuItem {
   id: string
-  name: string
   type: 'MEAL' | 'RECIPE'
+  language: string
+  name: string
   description: string | null
   tag: string | null
   prices: Record<string, number>

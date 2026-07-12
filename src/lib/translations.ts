@@ -98,6 +98,11 @@ export const translations = {
       imagesErrorDelete: 'Delete failed. Try again.',
       imagesErrorSetPrimary: 'Could not change primary photo. Try again.',
       imagesTypeLocked: 'Type cannot be changed after uploading images.',
+      frColumn: '🇫🇷 Français',
+      enColumn: '🇬🇧 English',
+      saveFr: 'Save FR',
+      saveEn: 'Save EN',
+      imagesDisabledCreate: 'Save at least one language version before uploading images.',
     },
     menuItemPage: {
       backToMenu: 'Back to menu',
@@ -699,6 +704,11 @@ export const translations = {
       imagesErrorDelete: 'Suppression échouée. Réessayez.',
       imagesErrorSetPrimary: 'Impossible de changer la photo principale. Réessayez.',
       imagesTypeLocked: 'Le type ne peut pas être modifié après avoir ajouté des photos.',
+      frColumn: '🇫🇷 Français',
+      enColumn: '🇬🇧 English',
+      saveFr: 'Enregistrer FR',
+      saveEn: 'Enregistrer EN',
+      imagesDisabledCreate: 'Enregistrez au moins une version linguistique avant d\'ajouter des photos.',
     },
     menuItemPage: {
       backToMenu: 'Retour au menu',

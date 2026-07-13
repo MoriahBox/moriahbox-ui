@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 import { useLanguage } from '@/components/providers/LanguageProvider'
 import { formatDate } from '@/lib/format'
+import { apiFetch } from '@/lib/api'
 import type { Driver, DriverStatus } from '@/types/driver'
-
-const API_BASE = () => process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
 
 const STATUS_COLORS: Record<DriverStatus, string> = {
   PENDING:   'bg-amber-100 text-amber-700',
@@ -34,7 +33,7 @@ export function DriverSlideOver({ driverId, onClose }: Props) {
     setLoading(true)
     setError(false)
     setDriver(null)
-    fetch(`${API_BASE()}/api/drivers/${driverId}`)
+    apiFetch(`/api/drivers/${driverId}`)
       .then(async r => {
         if (!r.ok) throw new Error()
         setDriver(await r.json() as Driver)

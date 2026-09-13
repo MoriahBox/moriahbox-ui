@@ -7,6 +7,7 @@ import { Menu, X, ShoppingCart, ChevronDown, LogIn, LogOut } from 'lucide-react'
 import { useLanguage } from '@/components/providers/LanguageProvider'
 import { useCart } from '@/features/cart/CartContext'
 import { useAuth } from '@/features/auth/AuthContext'
+import { formatCurrency } from '@/lib/format'
 import type { Lang } from '@/lib/translations'
 
 export function Navbar() {
@@ -18,7 +19,7 @@ export function Navbar() {
   const [mobileDriverOpen, setMobileDriverOpen] = useState(false)
   const { isReady, isLoggedIn, isAdmin, isDriver, driverId, signOut } = useAuth()
   const { lang, setLang, t } = useLanguage()
-  const { itemCount } = useCart()
+  const { itemCount, total } = useCart()
 
   async function handleLogout() {
     await signOut()
@@ -130,13 +131,22 @@ export function Navbar() {
 
           <Link
             href="/checkout"
-            className="relative inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-white text-[14px] font-medium px-5 py-2.5 rounded-md transition-colors"
+            className="relative inline-flex flex-col items-center justify-center bg-amber-400 hover:bg-amber-500 text-white rounded-md transition-all duration-200 px-5 min-w-[108px] h-[42px]"
           >
-            <ShoppingCart size={16} />
-            {t.nav.orderNow}
-            {itemCount > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 bg-[#2d6e42] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
-                {itemCount}
+            {itemCount > 0 ? (
+              <>
+                <span className="flex items-center gap-1.5 text-[14px] font-semibold leading-tight">
+                  <ShoppingCart size={14} />
+                  {itemCount}
+                </span>
+                <span className="text-[11px] font-medium leading-tight mt-0.5 opacity-90 tracking-tight">
+                  {formatCurrency(total, lang)}
+                </span>
+              </>
+            ) : (
+              <span className="flex items-center gap-2 text-[14px] font-medium">
+                <ShoppingCart size={16} />
+                {t.nav.orderNow}
               </span>
             )}
           </Link>
@@ -166,19 +176,47 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-[#1a4a2a] p-1"
-          onClick={() => setMobileOpen((prev) => !prev)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile right cluster: cart + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <Link
+            href="/checkout"
+            className={`inline-flex flex-col items-center justify-center rounded-md transition-all duration-200 px-3 min-w-[52px] h-[38px] ${
+              itemCount > 0
+                ? 'bg-amber-400 hover:bg-amber-500 text-white'
+                : 'bg-[#f2faf5] hover:bg-[#e8f5ee] text-[#2d6e42]'
+            }`}
+            aria-label={t.nav.orderNow}
+          >
+            {itemCount > 0 ? (
+              <>
+                <span className="flex items-center gap-1 text-[12px] font-semibold leading-tight">
+                  <ShoppingCart size={12} />
+                  {itemCount}
+                </span>
+                <span className="text-[10px] font-medium leading-tight opacity-90 tracking-tight">
+                  {formatCurrency(total, lang)}
+                </span>
+              </>
+            ) : (
+              <ShoppingCart size={18} />
+            )}
+          </Link>
+
+          <button
+            className="text-[#1a4a2a] p-1"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden border-t border-[#d8e8dc] bg-white px-6 pb-6 pt-4 flex flex-col gap-4">
+
+          {/* Nav links */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -193,6 +231,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+
           {/* Admin section */}
           {isAdmin && (
           <div>
@@ -257,19 +296,6 @@ export function Navbar() {
           </div>
           )}
 
-          <Link
-            href="/checkout"
-            onClick={() => setMobileOpen(false)}
-            className="relative inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-white text-[15px] font-medium px-5 py-3 rounded-md transition-colors"
-          >
-            <ShoppingCart size={16} />
-            {t.nav.orderNow}
-            {itemCount > 0 && (
-              <span className="ml-1 bg-[#2d6e42] text-white text-[11px] font-bold px-1.5 py-0.5 rounded-full">
-                {itemCount}
-              </span>
-            )}
-          </Link>
           <div className="pt-1">
             <LangToggle lang={lang} setLang={setLang} />
           </div>

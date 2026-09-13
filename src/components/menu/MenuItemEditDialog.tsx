@@ -510,15 +510,6 @@ export function MenuItemEditDialog({ mode, onClose, onSaved }: Props) {
 
         </div>
 
-        <div className="flex justify-end px-6 py-4 border-t border-[#d8e8dc]">
-          <button
-            onClick={onClose}
-            className="text-[13px] font-medium px-4 py-2 rounded border border-[#d8e8dc] text-[#5a6e60] hover:border-[#2d6e42] hover:text-[#2d6e42] transition-colors"
-          >
-            {d.cancel}
-          </button>
-        </div>
-
       </div>
     </div>
   )

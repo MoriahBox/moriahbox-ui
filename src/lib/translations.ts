@@ -53,8 +53,8 @@ export const translations = {
     },
     boxSizes: {
       SINGLE: 'Single',
-      COUPLE: 'Couple',
-      FAMILY: 'Family',
+      COUPLE: 'Duo',
+      FAMILY: 'Family (4 people)',
     },
     menuPage: {
       badge: 'Our menu',
@@ -80,7 +80,6 @@ export const translations = {
       pricesLabel: 'Prices (CA$)',
       newPrice: 'New price',
       stepsLabel: 'Recipe steps * (one per line)',
-      cancel: 'Cancel',
       save: 'Save',
       saving: 'Saving…',
       errorNameRequired: 'Name is required.',
@@ -631,7 +630,7 @@ export const translations = {
     hero: {
       badge: 'Cuisine africaine authentique, livrée',
       headline: 'Vrai repas. Vos racines. Votre porte.',
-      sub: "Des repas précuits et des boîtes d'ingrédients avec recettes, pensés pour les familles et célibataires qui veulent le goût de l'Afrique — sans passer des heures en cuisine.",
+      sub: "Des repas préparés et des boîtes d'ingrédients avec recettes, pensés pour les familles et célibataires qui veulent le goût de l'Afrique — sans passer des heures en cuisine.",
       cta1: 'Voir le menu',
       cta2: 'Comment ça marche',
       cards: [
@@ -647,20 +646,20 @@ export const translations = {
       title: 'Comment fonctionne MoriahBox',
       sub: 'De la navigation à votre première bouchée — tout le processus prend des minutes, pas des heures.',
       steps: [
-        { number: '01', emoji: '🛒', title: 'Parcourez le menu',                    description: "Choisissez parmi les repas précuits prêts à manger ou les boîtes d'ingrédients avec recettes détaillées." },
+        { number: '01', emoji: '🛒', title: 'Parcourez le menu',                    description: "Choisissez parmi les repas préparés prêts à manger ou les boîtes d'ingrédients avec recettes détaillées." },
         { number: '02', emoji: '📦', title: 'Choisissez votre format',              description: 'Individuel, couple ou famille — sélectionnez la portion adaptée à votre foyer.' },
         { number: '03', emoji: '🛵', title: 'Nous vous livrons',                    description: "Un livreur partenaire apporte votre commande directement à votre porte, fraîche et à l'heure." },
         { number: '04', emoji: '🍽️', title: 'Cuisinez ou mangez — à vous de choisir', description: "Réchauffez et servez en quelques minutes, ou suivez la recette incluse pour l'expérience cuisine complète." },
       ],
     },
     menuItemTypes: {
-      MEAL: 'Repas précuit',
+      MEAL: 'Repas préparé',
       RECIPE: "Boîte d'ingrédients",
     },
     boxSizes: {
       SINGLE: 'Individuel',
       COUPLE: 'Duo',
-      FAMILY: 'Famille',
+      FAMILY: 'Famille (4 personnes)',
     },
     menuPage: {
       badge: 'Notre menu',
@@ -686,7 +685,6 @@ export const translations = {
       pricesLabel: 'Prix (CA$)',
       newPrice: 'Nouveau prix',
       stepsLabel: 'Étapes de la recette * (une par ligne)',
-      cancel: 'Annuler',
       save: 'Enregistrer',
       saving: 'Enregistrement…',
       errorNameRequired: 'Le nom est requis.',
@@ -724,8 +722,8 @@ export const translations = {
       seeAll: 'Voir le menu complet →',
       browseBtn: 'Voir le menu complet',
       items: [
-        { emoji: '🍲', name: 'Soupe Egusi',       type: 'Repas précuit',       description: 'Mijotée aux graines de melon, légumes verts et protéine de votre choix.',                                             tag: 'Prêt à manger',      tagColor: 'bg-[#e8f5ee] text-[#2d6e42]', bg: 'bg-[#f2faf5]' },
-        { emoji: '🍛', name: 'Riz Jollof',        type: 'Repas précuit',       description: 'Jollof de fête à la base de tomates fumées. Disponible en format individuel ou familial.',                            tag: 'Favori du public',   tagColor: 'bg-amber-100 text-amber-600',  bg: 'bg-[#fffaf0]' },
+        { emoji: '🍲', name: 'Soupe Egusi',       type: 'Repas préparé',       description: 'Mijotée aux graines de melon, légumes verts et protéine de votre choix.',                                             tag: 'Prêt à manger',      tagColor: 'bg-[#e8f5ee] text-[#2d6e42]', bg: 'bg-[#f2faf5]' },
+        { emoji: '🍛', name: 'Riz Jollof',        type: 'Repas préparé',       description: 'Jollof de fête à la base de tomates fumées. Disponible en format individuel ou familial.',                            tag: 'Favori du public',   tagColor: 'bg-amber-100 text-amber-600',  bg: 'bg-[#fffaf0]' },
         { emoji: '🥘', name: 'Kit Soupe Poivrée', type: "Boîte d'ingrédients", description: "Toutes les épices, protéines et une fiche recette pour finir ça à la maison — exactement comme maman.",               tag: 'Cuisinez chez vous', tagColor: 'bg-[#e8f5ee] text-[#2d6e42]', bg: 'bg-[#f2faf5]' },
         { emoji: '🫘', name: 'Boîte Moi Moi',     type: "Boîte d'ingrédients", description: 'Pâte de haricots mixée, piments et assaisonnement. Cuit à la vapeur, prêt en 40 minutes.',                           tag: 'Recette facile',     tagColor: 'bg-amber-100 text-amber-600',  bg: 'bg-[#fffaf0]' },
       ],
@@ -1087,7 +1085,7 @@ export const translations = {
       subtitle: "MoriahBox est né d'une question simple : pourquoi est-il si difficile de trouver une vraie cuisine africaine faite maison quand on est loin de chez soi ?",
       missionBadge: 'Mission',
       missionTitle: 'Une cuisine qui fait penser à la maison',
-      mission: "MoriahBox a été créé pour les célibataires et familles africaines qui ont envie des saveurs de leur enfance — sans passer des heures à chercher des ingrédients introuvables ou à faire la cuisine après une longue journée. Nous collaborons avec des cuisiniers locaux et des livreurs partenaires pour livrer directement chez vous des repas précuits et des boîtes d'ingrédients avec recettes.",
+      mission: "MoriahBox a été créé pour les célibataires et familles africaines qui ont envie des saveurs de leur enfance — sans passer des heures à chercher des ingrédients introuvables ou à faire la cuisine après une longue journée. Nous collaborons avec des cuisiniers locaux et des livreurs partenaires pour livrer directement chez vous des repas préparés et des boîtes d'ingrédients avec recettes.",
       valuesBadge: 'Nos valeurs',
       values: [
         { emoji: '🍲', title: 'Saveurs authentiques', description: "Chaque repas et boîte d'ingrédients est conçu pour refléter le vrai goût de la cuisine africaine maison — sans compromis." },
@@ -1152,7 +1150,7 @@ export const translations = {
       sections: [
         {
           title: 'Le service',
-          body: 'MoriahBox est une plateforme de commande en ligne opérant au Québec, Canada. Nous proposons des repas précuits et des boîtes d\'ingrédients avec recettes, disponibles en format individuel, duo et famille, pour la livraison à domicile ou le retrait en magasin.',
+          body: 'MoriahBox est une plateforme de commande en ligne opérant au Québec, Canada. Nous proposons des repas préparés et des boîtes d\'ingrédients avec recettes, disponibles en format individuel, duo et famille, pour la livraison à domicile ou le retrait en magasin.',
         },
         {
           title: 'Admissibilité',
